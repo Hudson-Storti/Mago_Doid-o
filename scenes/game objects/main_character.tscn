@@ -199,7 +199,7 @@ scale = Vector2(0.542969, 0.542969)
 sprite_frames = SubResource("SpriteFrames_i650v")
 animation = &"Jump"
 autoplay = "Walk"
-frame_progress = 0.832354
+frame_progress = 0.99386
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-11.3333, 70.6667)

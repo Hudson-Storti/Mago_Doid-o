@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://qmrxpn88kuis"]
+[gd_scene load_steps=19 format=3 uid="uid://qmrxpn88kuis"]
 
 [ext_resource type="Texture2D" uid="uid://duwmk8sp0fwyx" path="res://assets/Free/Mob/masked_orc_idle_anim_f0.png" id="1_exg6q"]
 [ext_resource type="Script" path="res://game_manager.gd" id="2_cocw2"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://dvupf5rk15hp4" path="res://scenes/game objects/finish.tscn" id="7_3rop7"]
 [ext_resource type="PackedScene" uid="uid://cbi5f2nwsy31p" path="res://scenes/levels/level2.tscn" id="8_f5but"]
 [ext_resource type="PackedScene" uid="uid://xn5i7b8i2h25" path="res://scenes/game objects/enemy.tscn" id="9_60ja2"]
+[ext_resource type="Script" path="res://scenes/levels/h_box_container.gd" id="10_141cg"]
 [ext_resource type="Script" path="res://scenes/levels/pause.gd" id="10_mwwe2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmwdl"]
@@ -210,7 +211,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_o1thu")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k3571"]
-load_path = "res://.godot/imported/Heart.png-913affa855a6e2181fb56a8653a860e2.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6h7a"]
 content_margin_left = 8.0
@@ -366,6 +366,7 @@ offset_right = 41.5
 offset_bottom = 12.5
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("10_141cg")
 
 [node name="Heart" type="TextureRect" parent="UI/Hearts/HBoxContainer"]
 texture_filter = 1
