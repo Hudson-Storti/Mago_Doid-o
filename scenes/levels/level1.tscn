@@ -210,7 +210,6 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_o1thu")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_k3571"]
-load_path = "res://.godot/imported/Heart.png-913affa855a6e2181fb56a8653a860e2.ctex"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m6h7a"]
 content_margin_left = 8.0

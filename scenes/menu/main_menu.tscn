@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/menu/main_menu.gd" id="1_yg1ei"]
 [ext_resource type="Texture2D" uid="uid://drm38efa8v2ou" path="res://assets/Free/fundo.png" id="2_qxlqg"]
-[ext_resource type="Texture2D" uid="uid://c1si1wepdqup2" path="res://assets/Free/LogoGame.png" id="3_vdvgu"]
+[ext_resource type="Texture2D" uid="uid://0vgmi31ba0q5" path="res://assets/Free/logo4.0.png" id="3_couj5"]
 
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_yg1ei")
@@ -29,13 +29,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -290.5
-offset_top = -170.0
-offset_right = 290.5
-offset_bottom = -38.0
+offset_left = -494.0
+offset_top = -212.0
+offset_right = 506.0
+offset_bottom = -88.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_vdvgu")
+texture = ExtResource("3_couj5")
 
 [node name="level1" type="Button" parent="."]
 anchors_preset = 8

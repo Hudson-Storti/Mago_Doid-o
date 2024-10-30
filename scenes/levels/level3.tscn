@@ -213,7 +213,7 @@ sources/0 = SubResource("TileSetAtlasSource_o1thu")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jx406"]
 distance = -24.0
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_2wdp2"]
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_f8e41"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_knhe5"]
 content_margin_left = 8.0
@@ -351,10 +351,10 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 882.0
-offset_top = 2.0
-offset_right = 966.0
-offset_bottom = 42.0
+offset_left = -136.0
+offset_top = 52.0
+offset_right = -52.0
+offset_bottom = 92.0
 grow_horizontal = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="UI/Panel/Hearts"]
@@ -374,19 +374,19 @@ grow_vertical = 2
 [node name="Heart" type="TextureRect" parent="UI/Panel/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = SubResource("CompressedTexture2D_2wdp2")
+texture = SubResource("CompressedTexture2D_f8e41")
 expand_mode = 2
 
 [node name="Heart2" type="TextureRect" parent="UI/Panel/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = SubResource("CompressedTexture2D_2wdp2")
+texture = SubResource("CompressedTexture2D_f8e41")
 expand_mode = 2
 
 [node name="Heart3" type="TextureRect" parent="UI/Panel/Hearts/HBoxContainer"]
 texture_filter = 1
 layout_mode = 2
-texture = SubResource("CompressedTexture2D_2wdp2")
+texture = SubResource("CompressedTexture2D_f8e41")
 expand_mode = 2
 
 [node name="Pause" type="Node" parent="UI"]
