@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://btrblbw0gl7wg"]
+[gd_scene load_steps=20 format=3 uid="uid://btrblbw0gl7wg"]
 
 [ext_resource type="Texture2D" uid="uid://duwmk8sp0fwyx" path="res://assets/Free/Mob/masked_orc_idle_anim_f0.png" id="1_hkblp"]
 [ext_resource type="Script" path="res://game_manager.gd" id="2_xw2g1"]
@@ -11,7 +11,6 @@
 [ext_resource type="PackedScene" uid="uid://xn5i7b8i2h25" path="res://scenes/game objects/enemy.tscn" id="9_bgdj0"]
 [ext_resource type="Script" path="res://scenes/game objects/fall_area.gd" id="10_c2rsn"]
 [ext_resource type="Script" path="res://scenes/levels/pause.gd" id="11_0hode"]
-[ext_resource type="Script" path="res://scenes/levels/h_box_container.gd" id="11_r3vgh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmwdl"]
 size = Vector2(30, 40)
@@ -371,7 +370,6 @@ offset_right = 41.5
 offset_bottom = 12.5
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("11_r3vgh")
 
 [node name="Heart" type="TextureRect" parent="UI/Panel/Hearts/HBoxContainer"]
 texture_filter = 1
