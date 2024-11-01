@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://duwmk8sp0fwyx" path="res://assets/Free/Mob/masked_orc_idle_anim_f0.png" id="1_exg6q"]
 [ext_resource type="Script" path="res://game_manager.gd" id="2_cocw2"]
-[ext_resource type="Texture2D" uid="uid://b1cjoblgdfhp6" path="res://assets/Free/2-QdoJ7tuIvEWeAAAAABJRU5ErkJggg==.png" id="3_6oebr"]
+[ext_resource type="Texture2D" uid="uid://bq36xnonogu2r" path="res://assets/Free/Background/New Piskel-2.png.png" id="3_8o46o"]
 [ext_resource type="Texture2D" uid="uid://8jbj3dly0m" path="res://assets/Free/Terrain/Terrain (16x16).png" id="4_l2urj"]
 [ext_resource type="PackedScene" uid="uid://c6qkgg2t757j2" path="res://scenes/game objects/main_character.tscn" id="5_bkojj"]
 [ext_resource type="PackedScene" uid="uid://qcue26mjr617" path="res://scenes/game objects/collectable.tscn" id="6_ijmbq"]
@@ -265,13 +265,14 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -64.0
-offset_top = -100.0
-offset_right = 64.0
-offset_bottom = 101.0
+offset_left = -113.0
+offset_top = 47.0
+offset_right = 264.0
+offset_bottom = 286.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_6oebr")
+scale = Vector2(0.9, 0.9)
+texture = ExtResource("3_8o46o")
 stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="SceneObjects"]
@@ -296,7 +297,7 @@ position = Vector2(660, 535)
 
 [node name="Collectable3" parent="SceneObjects/Collectables group" instance=ExtResource("6_ijmbq")]
 texture_filter = 1
-position = Vector2(984, 293)
+position = Vector2(985, 281)
 
 [node name="Collectable4" parent="SceneObjects/Collectables group" instance=ExtResource("6_ijmbq")]
 texture_filter = 1
@@ -308,7 +309,7 @@ position = Vector2(289, 247)
 
 [node name="Finish" parent="SceneObjects" instance=ExtResource("7_3rop7")]
 texture_filter = 1
-position = Vector2(1017, 1)
+position = Vector2(1020, -19)
 target_level = ExtResource("8_f5but")
 
 [node name="Enemies" type="Node" parent="SceneObjects"]
