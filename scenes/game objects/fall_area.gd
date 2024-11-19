@@ -12,5 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_body_entered(body: Node2D) -> void:
-	if (body.name == "CharacterBody2D"):
-		get_tree().reload_current_scene()
+	if body.name == "CharacterBody2D":
+		# Verifica se o jogador possui o script de controle e chama o método para perder vida
+		if body.has_method("lose_life"):
+			body.lose_life()
