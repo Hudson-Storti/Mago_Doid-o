@@ -1,8 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://cbi5f2nwsy31p"]
+[gd_scene load_steps=29 format=3 uid="uid://cbi5f2nwsy31p"]
 
 [ext_resource type="Texture2D" uid="uid://duwmk8sp0fwyx" path="res://assets/Free/Mob/masked_orc_idle_anim_f0.png" id="1_x00cs"]
 [ext_resource type="Script" path="res://game_manager.gd" id="2_ml4cg"]
-[ext_resource type="Texture2D" uid="uid://b1cjoblgdfhp6" path="res://assets/Free/2-QdoJ7tuIvEWeAAAAABJRU5ErkJggg==.png" id="3_p6md0"]
+[ext_resource type="Texture2D" uid="uid://c1448w1g6dygo" path="res://assets/Free/Fase 4.png.png" id="3_n2ao3"]
 [ext_resource type="Texture2D" uid="uid://8jbj3dly0m" path="res://assets/Free/Terrain/Terrain (16x16).png" id="4_b117r"]
 [ext_resource type="PackedScene" uid="uid://c6qkgg2t757j2" path="res://scenes/game objects/main_character.tscn" id="5_l8d8y"]
 [ext_resource type="PackedScene" uid="uid://qcue26mjr617" path="res://scenes/game objects/collectable.tscn" id="6_1orpw"]
@@ -11,6 +11,16 @@
 [ext_resource type="PackedScene" uid="uid://btrblbw0gl7wg" path="res://scenes/levels/level3.tscn" id="9_bm6gg"]
 [ext_resource type="Script" path="res://scenes/levels/h_box_container.gd" id="10_7i27y"]
 [ext_resource type="Script" path="res://scenes/levels/pause.gd" id="10_m7at3"]
+[ext_resource type="Texture2D" uid="uid://dsyqpyriwgjpg" path="res://assets/Free/Music/botao-play.png" id="12_ve2wp"]
+[ext_resource type="AudioStream" uid="uid://bcmv1moho4r30" path="res://assets/Free/Music/Maneol Gomes - Caneta Azul.mp3" id="13_5mmxh"]
+[ext_resource type="AudioStream" uid="uid://cwxcfnosjrj4y" path="res://assets/Free/Music/Crazy Frog - Axel F (Official Video).mp3" id="14_lwbtb"]
+[ext_resource type="AudioStream" uid="uid://cnf262t5b1ifo" path="res://assets/Free/Music/Xuxa - Especial Estátua 20 anos.mp3" id="15_36oyx"]
+[ext_resource type="AudioStream" uid="uid://bl1j8qb5bf76g" path="res://assets/Free/Music/Vida loka parte 1 - Racionais Mcs.mp3" id="16_g4g6o"]
+[ext_resource type="AudioStream" uid="uid://c7y7bhsvqllgc" path="res://assets/Free/Music/Mc Sid , Nog - Sítio do Tio Harry (Animação Oficial) - Prod Nine e Chiocki.mp3" id="17_ncyqe"]
+[ext_resource type="AudioStream" uid="uid://uopvhub15m2b" path="res://assets/Free/Music/Mamonas Assassinas - Pelados em Santos (Videoclipe).mp3" id="18_l4m5i"]
+[ext_resource type="AudioStream" uid="uid://oi44yc6yo24t" path="res://assets/Free/Music/Eu Sou O Gummy Bear - Gummy Bear Song Brazilian Osito Gominola Brazil Som Livre Brasil.mp3" id="19_fjyji"]
+[ext_resource type="Texture2D" uid="uid://bxdoccd01ip54" path="res://assets/Free/Music/pausa.png" id="20_0a13q"]
+[ext_resource type="Texture2D" uid="uid://b7dpdptyrwbr8" path="res://assets/Free/Music/seta-para-a-direita (1).png" id="21_hnjuu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmwdl"]
 size = Vector2(30, 40)
@@ -256,13 +266,13 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -64.0
-offset_top = -100.0
-offset_right = 64.0
-offset_bottom = 101.0
+offset_left = 7.0
+offset_top = 37.0
+offset_right = 7.0
+offset_bottom = 45.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_p6md0")
+texture = ExtResource("3_n2ao3")
 stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="SceneObjects"]
@@ -270,7 +280,7 @@ texture_filter = 1
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_prthj")
 format = 2
-layer_0/tile_data = PackedInt32Array(851968, 0, 2, 851969, 0, 2, 851970, 0, 2, 851971, 0, 2, 851972, 0, 2, 851973, 0, 2, 851974, 0, 2, 851975, 0, 2, 851976, 0, 2, 851977, 0, 2, 851978, 0, 2, 851979, 0, 2, 851980, 0, 2, 851981, 0, 2, 851982, 0, 2, 851983, 0, 2, 851984, 0, 2, 851985, 0, 2, 851986, 0, 2, 851987, 0, 2, 851988, 0, 2, 851989, 0, 2, 851990, 0, 2, 851991, 0, 2, 786432, 983040, 6, 786455, 983040, 6, 23, 983040, 4, 65536, 983040, 5, 131072, 983040, 5, 196608, 983040, 5, 262144, 983040, 5, 327680, 983040, 5, 393216, 983040, 5, 458752, 983040, 5, 524288, 983040, 5, 589824, 983040, 5, 655360, 983040, 5, 720896, 983040, 5, 0, 983040, 4, 65559, 983040, 5, 131095, 983040, 5, 196631, 983040, 5, 262167, 983040, 5, 327703, 983040, 5, 393239, 983040, 5, 458775, 983040, 5, 524311, 983040, 5, 589847, 983040, 5, 655383, 983040, 5, 720919, 983040, 5, 1, 851968, 4, 2, 851968, 4, 3, 851968, 4, 4, 851968, 4, 5, 851968, 4, 6, 851968, 4, 7, 851968, 4, 8, 851968, 4, 9, 851968, 4, 10, 851968, 4, 11, 851968, 4, 12, 851968, 4, 13, 851968, 4, 14, 851968, 4, 15, 851968, 4, 16, 851968, 4, 17, 851968, 4, 18, 851968, 4, 19, 851968, 4, 20, 851968, 4, 21, 851968, 4, 22, 851968, 4, 720897, 983040, 5, 655361, 983040, 5, 589825, 983040, 5, 524289, 983040, 5, 458753, 983040, 5, 393217, 983040, 4, 393226, 1114112, 2, 393229, 1179648, 2, 393227, 1179648, 2, 393228, 1179648, 2, 393218, 1114112, 2, 393219, 1245184, 2, 327687, 1245184, 2, 327686, 1114112, 2, 786433, 983040, 6, 786439, 786432, 4, 786442, 917504, 4, 786440, 851968, 4, 786441, 851968, 4, 655373, 786432, 4, 655376, 917504, 4, 655374, 851968, 4, 655375, 851968, 4, 589845, 851968, 4, 589844, 851968, 4, 589846, 917504, 4, 589843, 786432, 4, 524310, 917504, 6, 524309, 851968, 6, 458774, 917504, 5, 327699, 1245184, 2, 327698, 1179648, 2, 327697, 1114112, 2, 393230, 1245184, 2)
+layer_0/tile_data = PackedInt32Array(851968, 0, 2, 851969, 0, 2, 851970, 0, 2, 851971, 0, 2, 851972, 0, 2, 851973, 0, 2, 851974, 0, 2, 851975, 0, 2, 851976, 0, 2, 851977, 0, 2, 851978, 0, 2, 851979, 0, 2, 851980, 0, 2, 851981, 0, 2, 851982, 0, 2, 851983, 0, 2, 851984, 0, 2, 851985, 0, 2, 851986, 0, 2, 851987, 0, 2, 851988, 0, 2, 851989, 0, 2, 851990, 0, 2, 851991, 0, 2, 786432, 983040, 6, 786455, 983040, 6, 23, 983040, 4, 65536, 983040, 5, 131072, 983040, 5, 196608, 983040, 5, 262144, 983040, 5, 327680, 983040, 5, 393216, 983040, 5, 458752, 983040, 5, 524288, 983040, 5, 589824, 983040, 5, 655360, 983040, 5, 720896, 983040, 5, 0, 983040, 4, 65559, 983040, 5, 131095, 983040, 5, 196631, 983040, 5, 262167, 983040, 5, 327703, 983040, 5, 393239, 983040, 5, 458775, 983040, 5, 524311, 983040, 5, 589847, 983040, 5, 655383, 983040, 5, 720919, 983040, 5, 1, 851968, 4, 2, 851968, 4, 3, 851968, 4, 4, 851968, 4, 5, 851968, 4, 6, 851968, 4, 7, 851968, 4, 8, 851968, 4, 9, 851968, 4, 10, 851968, 4, 11, 851968, 4, 12, 851968, 4, 13, 851968, 4, 14, 851968, 4, 15, 851968, 4, 16, 851968, 4, 17, 851968, 4, 18, 851968, 4, 19, 851968, 4, 20, 851968, 4, 21, 851968, 4, 22, 851968, 4, 720897, 983040, 5, 655361, 983040, 5, 589825, 983040, 5, 524289, 983040, 5, 458753, 983040, 5, 393217, 983040, 5, 393226, 1114112, 2, 393229, 1179648, 2, 393227, 1179648, 2, 393228, 1179648, 2, 327687, 1245184, 2, 327686, 1114112, 2, 786433, 983040, 6, 786439, 786432, 4, 786442, 917504, 4, 786440, 851968, 4, 786441, 851968, 4, 655373, 786432, 4, 655376, 917504, 4, 655374, 851968, 4, 655375, 851968, 4, 589845, 851968, 4, 589844, 851968, 4, 589846, 917504, 4, 589843, 786432, 4, 524310, 917504, 6, 524309, 851968, 6, 458774, 917504, 5, 327699, 1245184, 2, 327698, 1179648, 2, 327697, 1114112, 2, 393230, 1245184, 2, 327681, 983040, 4, 327682, 1114112, 2, 327683, 1245184, 2)
 
 [node name="CharacterBody2D" parent="SceneObjects" instance=ExtResource("5_l8d8y")]
 position = Vector2(215, 365)
@@ -290,12 +300,13 @@ position = Vector2(1009, 389)
 position = Vector2(572, 295)
 
 [node name="Collectable5" parent="SceneObjects/Collectables group" instance=ExtResource("6_1orpw")]
-position = Vector2(116, 298)
+position = Vector2(165, 234)
 
 [node name="Enemy" parent="SceneObjects/Collectables group" instance=ExtResource("7_rpt2o")]
 position = Vector2(644, 421)
 
 [node name="Finish" parent="SceneObjects" instance=ExtResource("7_ybefm")]
+position = Vector2(33, -62)
 target_level = ExtResource("9_bm6gg")
 
 [node name="UI" type="CanvasLayer" parent="."]
@@ -303,20 +314,14 @@ target_level = ExtResource("9_bm6gg")
 [node name="Panel" type="Panel" parent="UI"]
 offset_left = 51.0
 offset_top = 51.0
-offset_right = 134.0
+offset_right = 177.0
 offset_bottom = 91.0
 
 [node name="PointsLabel" type="Label" parent="UI/Panel"]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -2.0
-offset_top = -2.0
-offset_right = 49.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 118.0
+offset_bottom = 35.0
 theme_override_font_sizes/font_size = 25
 text = "Pontos:  0"
 horizontal_alignment = 1
@@ -327,7 +332,7 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 878.0
+offset_left = 853.0
 offset_top = 3.0
 offset_right = 962.0
 offset_bottom = 43.0
@@ -431,5 +436,65 @@ theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_b6ose")
 text = "Voltar para o Menu
 "
 
+[node name="Audio" type="Node" parent="."]
+
+[node name="playmusic" type="Button" parent="Audio"]
+texture_filter = 1
+offset_left = 586.0
+offset_top = 24.0
+offset_right = 626.0
+offset_bottom = 64.0
+icon = ExtResource("12_ve2wp")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("13_5mmxh")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("14_lwbtb")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("15_36oyx")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("16_g4g6o")
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("17_ncyqe")
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("18_l4m5i")
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("19_fjyji")
+
+[node name="pausemusic" type="Button" parent="Audio"]
+texture_filter = 1
+offset_left = 538.0
+offset_top = 24.0
+offset_right = 578.0
+offset_bottom = 64.0
+icon = ExtResource("20_0a13q")
+
+[node name="rightmusic" type="Button" parent="Audio"]
+texture_filter = 1
+offset_left = 631.0
+offset_top = 22.0
+offset_right = 671.0
+offset_bottom = 62.0
+icon = ExtResource("21_hnjuu")
+
+[node name="leftmusic" type="Button" parent="Audio"]
+texture_filter = 1
+offset_left = 528.0
+offset_top = 64.0
+offset_right = 568.0
+offset_bottom = 104.0
+rotation = 3.13232
+icon = ExtResource("21_hnjuu")
+
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause" method="_on_menu_pressed"]
+[connection signal="pressed" from="Audio/playmusic" to="GameManager" method="_on_playmusic_pressed"]
+[connection signal="pressed" from="Audio/pausemusic" to="GameManager" method="_on_pausemusic_pressed"]
+[connection signal="pressed" from="Audio/rightmusic" to="GameManager" method="_on_rightmusic_pressed"]
+[connection signal="pressed" from="Audio/leftmusic" to="GameManager" method="_on_leftmusic_pressed"]

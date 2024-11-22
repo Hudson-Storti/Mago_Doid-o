@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://uopvhub15m2b"
+path="res://.godot/imported/Mamonas Assassinas - Pelados em Santos (Videoclipe).mp3-94589b76c820bc0484f1147fc8b85cc1.mp3str"
+
+[deps]
+
+source_file="res://assets/Free/Music/Mamonas Assassinas - Pelados em Santos (Videoclipe).mp3"
+dest_files=["res://.godot/imported/Mamonas Assassinas - Pelados em Santos (Videoclipe).mp3-94589b76c820bc0484f1147fc8b85cc1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,8 +1,8 @@
-[gd_scene load_steps=21 format=3 uid="uid://btrblbw0gl7wg"]
+[gd_scene load_steps=31 format=3 uid="uid://btrblbw0gl7wg"]
 
 [ext_resource type="Texture2D" uid="uid://duwmk8sp0fwyx" path="res://assets/Free/Mob/masked_orc_idle_anim_f0.png" id="1_hkblp"]
 [ext_resource type="Script" path="res://game_manager.gd" id="2_xw2g1"]
-[ext_resource type="Texture2D" uid="uid://b1cjoblgdfhp6" path="res://assets/Free/2-QdoJ7tuIvEWeAAAAABJRU5ErkJggg==.png" id="3_uskth"]
+[ext_resource type="Texture2D" uid="uid://cp1reoho2rpjy" path="res://assets/Free/Fase 5.png.png" id="3_8aiqa"]
 [ext_resource type="Texture2D" uid="uid://8jbj3dly0m" path="res://assets/Free/Terrain/Terrain (16x16).png" id="4_qgixm"]
 [ext_resource type="PackedScene" uid="uid://c6qkgg2t757j2" path="res://scenes/game objects/main_character.tscn" id="5_2no1x"]
 [ext_resource type="PackedScene" uid="uid://qcue26mjr617" path="res://scenes/game objects/collectable.tscn" id="6_y8cct"]
@@ -12,6 +12,16 @@
 [ext_resource type="Script" path="res://scenes/game objects/fall_area.gd" id="10_c2rsn"]
 [ext_resource type="Script" path="res://scenes/levels/pause.gd" id="11_0hode"]
 [ext_resource type="Script" path="res://scenes/levels/h_box_container.gd" id="11_r3vgh"]
+[ext_resource type="Texture2D" uid="uid://dsyqpyriwgjpg" path="res://assets/Free/Music/botao-play.png" id="13_sxw8s"]
+[ext_resource type="AudioStream" uid="uid://bcmv1moho4r30" path="res://assets/Free/Music/Maneol Gomes - Caneta Azul.mp3" id="14_1fe8d"]
+[ext_resource type="AudioStream" uid="uid://cwxcfnosjrj4y" path="res://assets/Free/Music/Crazy Frog - Axel F (Official Video).mp3" id="15_mwi8b"]
+[ext_resource type="AudioStream" uid="uid://cnf262t5b1ifo" path="res://assets/Free/Music/Xuxa - Especial Estátua 20 anos.mp3" id="16_b1k6j"]
+[ext_resource type="AudioStream" uid="uid://bl1j8qb5bf76g" path="res://assets/Free/Music/Vida loka parte 1 - Racionais Mcs.mp3" id="17_2ckrh"]
+[ext_resource type="AudioStream" uid="uid://c7y7bhsvqllgc" path="res://assets/Free/Music/Mc Sid , Nog - Sítio do Tio Harry (Animação Oficial) - Prod Nine e Chiocki.mp3" id="18_abruc"]
+[ext_resource type="AudioStream" uid="uid://uopvhub15m2b" path="res://assets/Free/Music/Mamonas Assassinas - Pelados em Santos (Videoclipe).mp3" id="19_wsck2"]
+[ext_resource type="AudioStream" uid="uid://oi44yc6yo24t" path="res://assets/Free/Music/Eu Sou O Gummy Bear - Gummy Bear Song Brazilian Osito Gominola Brazil Som Livre Brasil.mp3" id="20_f8e0q"]
+[ext_resource type="Texture2D" uid="uid://bxdoccd01ip54" path="res://assets/Free/Music/pausa.png" id="21_h1d3y"]
+[ext_resource type="Texture2D" uid="uid://b7dpdptyrwbr8" path="res://assets/Free/Music/seta-para-a-direita (1).png" id="22_ddiyx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pmwdl"]
 size = Vector2(30, 40)
@@ -268,13 +278,13 @@ texture_filter = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -64.0
-offset_top = -100.0
-offset_right = 64.0
-offset_bottom = 101.0
+offset_left = 36.0
+offset_top = 45.0
+offset_right = 36.0
+offset_bottom = 53.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_uskth")
+texture = ExtResource("3_8aiqa")
 stretch_mode = 1
 
 [node name="TileMap" type="TileMap" parent="SceneObjects"]
@@ -282,7 +292,7 @@ texture_filter = 1
 scale = Vector2(3, 3)
 tile_set = SubResource("TileSet_prthj")
 format = 2
-layer_0/tile_data = PackedInt32Array(851968, 0, 6, 851969, 0, 2, 851970, 0, 2, 851971, 0, 2, 851972, 0, 2, 851973, 0, 2, 851974, 0, 2, 851975, 0, 2, 851978, 0, 2, 851979, 0, 2, 851980, 0, 2, 851988, 0, 2, 851989, 0, 2, 851990, 0, 2, 851991, 131072, 6, 786432, 0, 5, 786455, 131072, 5, 23, 131072, 4, 65536, 0, 5, 131072, 0, 5, 196608, 0, 5, 262144, 0, 5, 327680, 0, 5, 393216, 0, 5, 458752, 0, 5, 524288, 0, 5, 589824, 0, 5, 655360, 0, 5, 720896, 0, 5, 0, 0, 4, 65559, 131072, 5, 131095, 131072, 5, 196631, 131072, 5, 262167, 131072, 5, 327703, 131072, 5, 393239, 131072, 5, 458775, 131072, 5, 524311, 131072, 5, 589847, 131072, 5, 655383, 131072, 5, 720919, 131072, 5, 1, 65536, 4, 2, 65536, 4, 3, 65536, 4, 4, 65536, 4, 5, 65536, 4, 6, 65536, 4, 7, 65536, 4, 8, 65536, 4, 9, 65536, 4, 10, 65536, 4, 11, 65536, 4, 12, 65536, 4, 13, 65536, 4, 14, 65536, 4, 15, 65536, 4, 16, 65536, 4, 17, 65536, 4, 18, 65536, 4, 19, 65536, 4, 20, 65536, 4, 21, 65536, 4, 22, 65536, 4, 720897, 983040, 5, 655361, 983040, 5, 589825, 983040, 5, 524289, 983040, 5, 458753, 983040, 5, 393217, 983040, 4, 393226, 1179648, 2, 393229, 1245184, 2, 393227, 1179648, 2, 393228, 1179648, 2, 393218, 1114112, 2, 393219, 1179648, 2, 786433, 983040, 6, 589845, 1179648, 2, 589844, 1179648, 2, 589846, 1245184, 2, 589843, 1114112, 2, 524310, 1245184, 2, 524309, 1114112, 2, 458774, 1114112, 2, 327699, 1245184, 2, 327698, 1179648, 2, 327697, 1114112, 2, 655376, 1245184, 2, 655374, 1179648, 2, 655375, 1179648, 2, 655373, 1114112, 2, 393220, 1179648, 2, 393221, 1245184, 2, 393225, 1114112, 2, 786439, 1179648, 2, 786442, 1179648, 2, 786443, 1245184, 2, 786438, 1114112, 2)
+layer_0/tile_data = PackedInt32Array(851968, 0, 6, 851969, 0, 2, 851970, 0, 2, 851971, 0, 2, 851972, 0, 2, 851973, 0, 2, 851974, 0, 2, 851975, 0, 2, 851978, 0, 2, 851979, 0, 2, 851980, 0, 2, 851988, 0, 2, 851989, 0, 2, 851990, 0, 2, 851991, 131072, 6, 786432, 0, 5, 786455, 131072, 5, 23, 131072, 4, 65536, 0, 5, 131072, 0, 5, 196608, 0, 5, 262144, 0, 5, 327680, 0, 5, 393216, 0, 5, 458752, 0, 5, 524288, 0, 5, 589824, 0, 5, 655360, 0, 5, 720896, 0, 5, 0, 0, 4, 65559, 131072, 5, 131095, 131072, 5, 196631, 131072, 5, 262167, 131072, 5, 327703, 131072, 5, 393239, 131072, 5, 458775, 131072, 5, 524311, 131072, 5, 589847, 131072, 5, 655383, 131072, 5, 720919, 131072, 5, 1, 65536, 4, 2, 65536, 4, 3, 65536, 4, 4, 65536, 4, 5, 65536, 4, 6, 65536, 4, 7, 65536, 4, 8, 65536, 4, 9, 65536, 4, 10, 65536, 4, 11, 65536, 4, 12, 65536, 4, 13, 65536, 4, 14, 65536, 4, 15, 65536, 4, 16, 65536, 4, 17, 65536, 4, 18, 65536, 4, 19, 65536, 4, 20, 65536, 4, 21, 65536, 4, 22, 65536, 4, 720897, 983040, 5, 655361, 983040, 5, 589825, 983040, 5, 524289, 983040, 5, 458753, 983040, 5, 393217, 983040, 5, 393226, 1179648, 2, 393229, 1245184, 2, 393227, 1179648, 2, 393228, 1179648, 2, 786433, 983040, 6, 589845, 1179648, 2, 589844, 1179648, 2, 589846, 1245184, 2, 589843, 1114112, 2, 524310, 1245184, 2, 524309, 1114112, 2, 458774, 1114112, 2, 327699, 1245184, 2, 327698, 1179648, 2, 327697, 1114112, 2, 655376, 1245184, 2, 655374, 1179648, 2, 655375, 1179648, 2, 655373, 1114112, 2, 393225, 1114112, 2, 786439, 1179648, 2, 786442, 1179648, 2, 786443, 1245184, 2, 786438, 1114112, 2, 327681, 983040, 4, 327682, 1114112, 2, 327685, 1245184, 2, 327683, 1179648, 2, 327684, 1179648, 2)
 
 [node name="CharacterBody2D" parent="SceneObjects" instance=ExtResource("5_2no1x")]
 position = Vector2(215, 365)
@@ -302,9 +312,10 @@ position = Vector2(1009, 389)
 position = Vector2(523, 290)
 
 [node name="Collectable5" parent="SceneObjects/Collectables group" instance=ExtResource("6_y8cct")]
-position = Vector2(116, 298)
+position = Vector2(210, 241)
 
 [node name="Finish" parent="SceneObjects" instance=ExtResource("7_1kvpw")]
+position = Vector2(50, -55)
 target_level = ExtResource("8_fyo64")
 
 [node name="Enemy" parent="SceneObjects" instance=ExtResource("9_bgdj0")]
@@ -328,20 +339,14 @@ shape = SubResource("WorldBoundaryShape2D_jx406")
 [node name="Panel" type="Panel" parent="UI"]
 offset_left = 51.0
 offset_top = 51.0
-offset_right = 134.0
+offset_right = 176.0
 offset_bottom = 91.0
 
 [node name="PointsLabel" type="Label" parent="UI/Panel"]
 unique_name_in_owner = true
 layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -2.0
-offset_top = -2.0
-offset_right = 49.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 118.0
+offset_bottom = 35.0
 theme_override_font_sizes/font_size = 25
 text = "Pontos:  0"
 horizontal_alignment = 1
@@ -352,7 +357,7 @@ layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = 882.0
+offset_left = 859.0
 offset_top = 2.0
 offset_right = 966.0
 offset_bottom = 42.0
@@ -450,6 +455,66 @@ theme_override_styles/disabled_mirrored = SubResource("StyleBoxFlat_bnxyd")
 text = "Voltar para o Menu
 "
 
+[node name="Audio" type="Node" parent="."]
+
+[node name="playmusic" type="Button" parent="Audio"]
+texture_filter = 1
+offset_left = 586.0
+offset_top = 24.0
+offset_right = 626.0
+offset_bottom = 64.0
+icon = ExtResource("13_sxw8s")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("14_1fe8d")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("15_mwi8b")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("16_b1k6j")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("17_2ckrh")
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("18_abruc")
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("19_wsck2")
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("20_f8e0q")
+
+[node name="pausemusic" type="Button" parent="Audio"]
+texture_filter = 1
+offset_left = 538.0
+offset_top = 24.0
+offset_right = 578.0
+offset_bottom = 64.0
+icon = ExtResource("21_h1d3y")
+
+[node name="rightmusic" type="Button" parent="Audio"]
+texture_filter = 1
+offset_left = 631.0
+offset_top = 22.0
+offset_right = 671.0
+offset_bottom = 62.0
+icon = ExtResource("22_ddiyx")
+
+[node name="leftmusic" type="Button" parent="Audio"]
+texture_filter = 1
+offset_left = 528.0
+offset_top = 64.0
+offset_right = 568.0
+offset_bottom = 104.0
+rotation = 3.13232
+icon = ExtResource("22_ddiyx")
+
 [connection signal="body_entered" from="SceneObjects/Area2D" to="SceneObjects/Area2D" method="_on_body_entered"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Resume" to="UI/Pause" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI/Pause/PausePanel/VBoxContainer/Menu" to="UI/Pause" method="_on_menu_pressed"]
+[connection signal="pressed" from="Audio/playmusic" to="GameManager" method="_on_playmusic_pressed"]
+[connection signal="pressed" from="Audio/pausemusic" to="GameManager" method="_on_pausemusic_pressed"]
+[connection signal="pressed" from="Audio/rightmusic" to="GameManager" method="_on_rightmusic_pressed"]
+[connection signal="pressed" from="Audio/leftmusic" to="GameManager" method="_on_leftmusic_pressed"]

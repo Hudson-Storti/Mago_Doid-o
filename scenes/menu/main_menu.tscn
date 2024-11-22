@@ -1,8 +1,121 @@
-[gd_scene load_steps=4 format=3 uid="uid://cbip71dkddjh5"]
+[gd_scene load_steps=31 format=3 uid="uid://cbip71dkddjh5"]
 
 [ext_resource type="Script" path="res://scenes/menu/main_menu.gd" id="1_yg1ei"]
-[ext_resource type="Texture2D" uid="uid://drm38efa8v2ou" path="res://assets/Free/fundo.png" id="2_qxlqg"]
-[ext_resource type="Texture2D" uid="uid://c1si1wepdqup2" path="res://assets/Free/LogoGame.png" id="3_vdvgu"]
+[ext_resource type="Texture2D" uid="uid://ytv8no1lf4k5" path="res://assets/Free/BackgroundBlack.png" id="2_fn5qh"]
+[ext_resource type="Texture2D" uid="uid://b67k3yroaf0rv" path="res://assets/Free/logo4.0.png" id="3_0pvdx"]
+[ext_resource type="Texture2D" uid="uid://dsyqpyriwgjpg" path="res://assets/Free/Music/botao-play.png" id="4_3imqy"]
+[ext_resource type="Texture2D" uid="uid://bie6anpeh5qfp" path="res://assets/Free/particle_pack/fire_01.png" id="4_6wmmf"]
+[ext_resource type="Script" path="res://scenes/menu/audio.gd" id="4_pjenf"]
+[ext_resource type="AudioStream" uid="uid://bcmv1moho4r30" path="res://assets/Free/Music/Maneol Gomes - Caneta Azul.mp3" id="5_tni1r"]
+[ext_resource type="Texture2D" uid="uid://bxdoccd01ip54" path="res://assets/Free/Music/pausa.png" id="5_v2p0o"]
+[ext_resource type="Texture2D" uid="uid://bf0ghk5le51wm" path="res://assets/Free/particle_pack/smoke_01.png" id="5_ykjgn"]
+[ext_resource type="AudioStream" uid="uid://cwxcfnosjrj4y" path="res://assets/Free/Music/Crazy Frog - Axel F (Official Video).mp3" id="6_5fxvo"]
+[ext_resource type="Texture2D" uid="uid://cub4kgvnxf0m" path="res://assets/Free/particle_pack/particula de fogo.png" id="6_ay7jo"]
+[ext_resource type="Texture2D" uid="uid://b7dpdptyrwbr8" path="res://assets/Free/Music/seta-para-a-direita (1).png" id="6_h06r6"]
+[ext_resource type="AudioStream" uid="uid://cnf262t5b1ifo" path="res://assets/Free/Music/Xuxa - Especial Estátua 20 anos.mp3" id="7_3go8n"]
+[ext_resource type="Texture2D" uid="uid://c5c23i205j1qs" path="res://assets/Free/particle_pack/fire_02.png" id="7_xk3k8"]
+[ext_resource type="AudioStream" uid="uid://bl1j8qb5bf76g" path="res://assets/Free/Music/Vida loka parte 1 - Racionais Mcs.mp3" id="8_jrk6n"]
+[ext_resource type="AudioStream" uid="uid://c7y7bhsvqllgc" path="res://assets/Free/Music/Mc Sid , Nog - Sítio do Tio Harry (Animação Oficial) - Prod Nine e Chiocki.mp3" id="9_2ir18"]
+[ext_resource type="AudioStream" uid="uid://uopvhub15m2b" path="res://assets/Free/Music/Mamonas Assassinas - Pelados em Santos (Videoclipe).mp3" id="10_hnvqq"]
+[ext_resource type="AudioStream" uid="uid://oi44yc6yo24t" path="res://assets/Free/Music/Eu Sou O Gummy Bear - Gummy Bear Song Brazilian Osito Gominola Brazil Som Livre Brasil.mp3" id="11_3pqxw"]
+
+[sub_resource type="Environment" id="Environment_j27cs"]
+background_mode = 3
+glow_enabled = true
+glow_normalized = true
+glow_blend_mode = 1
+
+[sub_resource type="Gradient" id="Gradient_x7asa"]
+offsets = PackedFloat32Array(0.364, 1)
+colors = PackedColorArray(0.819608, 0.611765, 0, 1, 1, 1, 0, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_pksd6"]
+gradient = SubResource("Gradient_x7asa")
+
+[sub_resource type="Curve" id="Curve_cfvoy"]
+_data = [Vector2(0, 0), 0.0, 5.48018, 0, 0, Vector2(0.122302, 0.598529), 2.85419, 2.85419, 0, 0, Vector2(0.377698, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="CurveTexture" id="CurveTexture_ndtqr"]
+curve = SubResource("Curve_cfvoy")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_3ypwu"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3(0, -1, 0)
+spread = 50.0
+initial_velocity_max = 100.0
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = 32.0
+gravity = Vector3(0, -300, 0)
+linear_accel_min = -2.23517e-06
+linear_accel_max = 100.0
+scale_min = 0.5
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_ndtqr")
+color_ramp = SubResource("GradientTexture1D_pksd6")
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_am56w"]
+gradient = SubResource("Gradient_x7asa")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_m3n0n"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3(0, -1, 0)
+spread = 17.0
+initial_velocity_max = 100.0
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = 32.0
+gravity = Vector3(0, -300, 0)
+linear_accel_min = -2.23517e-06
+linear_accel_max = 100.0
+scale_min = 0.5
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_ndtqr")
+color_ramp = SubResource("GradientTexture1D_am56w")
+
+[sub_resource type="Curve" id="Curve_hhlik"]
+_data = [Vector2(0.00359713, 0.493382), 0.0, 0.0, 0, 0, Vector2(1, 0.302206), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_5ighg"]
+curve = SubResource("Curve_hhlik")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_eqbsq"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3(0, -1, 0)
+spread = 50.0
+initial_velocity_max = 100.0
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = 32.0
+gravity = Vector3(0, -300, 0)
+linear_accel_min = -2.23517e-06
+linear_accel_max = 100.0
+scale_min = 0.1
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_5ighg")
+color_ramp = SubResource("GradientTexture1D_am56w")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_cgg8m"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 1.0
+direction = Vector3(0, -1, 0)
+spread = 50.0
+initial_velocity_max = 100.0
+angular_velocity_min = -1.60933e-05
+angular_velocity_max = 32.0
+gravity = Vector3(0, -300, 0)
+linear_accel_min = -2.23517e-06
+linear_accel_max = 100.0
+scale_min = 0.5
+scale_max = 0.5
+scale_curve = SubResource("CurveTexture_ndtqr")
+color_ramp = SubResource("GradientTexture1D_pksd6")
 
 [node name="MainMenu" type="Node"]
 script = ExtResource("1_yg1ei")
@@ -14,13 +127,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -565.0
-offset_top = -360.0
-offset_right = 565.0
-offset_bottom = 360.0
+offset_left = -594.0
+offset_top = -364.0
+offset_right = 614.0
+offset_bottom = 356.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_qxlqg")
+texture = ExtResource("2_fn5qh")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
@@ -29,13 +142,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -290.5
-offset_top = -170.0
-offset_right = 290.5
+offset_left = -379.0
+offset_top = -208.0
+offset_right = 383.0
 offset_bottom = -38.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("3_vdvgu")
+texture = ExtResource("3_0pvdx")
 
 [node name="level1" type="Button" parent="."]
 anchors_preset = 8
@@ -43,10 +156,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -273.0
-offset_top = -11.0
-offset_right = -81.0
-offset_bottom = 80.0
+offset_left = -247.0
+offset_top = -12.0
+offset_right = -55.0
+offset_bottom = 79.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 25
@@ -58,24 +171,499 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 51.0
-offset_top = -15.0
-offset_right = 243.0
-offset_bottom = 76.0
+offset_left = 46.0
+offset_top = -13.0
+offset_right = 238.0
+offset_bottom = 78.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 25
 text = "level: 2"
 
 [node name="level3" type="Button" parent="."]
-offset_left = 303.0
-offset_top = 436.0
-offset_right = 494.0
-offset_bottom = 526.0
+offset_left = 329.0
+offset_top = 434.0
+offset_right = 520.0
+offset_bottom = 524.0
 theme_override_font_sizes/font_size = 25
 text = "Level: 3
 "
 
+[node name="level4" type="Button" parent="."]
+offset_left = 620.0
+offset_top = 433.0
+offset_right = 811.0
+offset_bottom = 523.0
+theme_override_font_sizes/font_size = 25
+text = "Level: 4
+"
+
+[node name="Audio" type="Node" parent="."]
+script = ExtResource("4_pjenf")
+
+[node name="playmusic" type="Button" parent="Audio"]
+texture_filter = 1
+offset_left = 586.0
+offset_top = 24.0
+offset_right = 626.0
+offset_bottom = 64.0
+icon = ExtResource("4_3imqy")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("5_tni1r")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("6_5fxvo")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("7_3go8n")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("8_jrk6n")
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("9_2ir18")
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("10_hnvqq")
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("11_3pqxw")
+
+[node name="pausemusic" type="Button" parent="Audio"]
+texture_filter = 1
+offset_left = 538.0
+offset_top = 24.0
+offset_right = 578.0
+offset_bottom = 64.0
+icon = ExtResource("5_v2p0o")
+
+[node name="rightmusic" type="Button" parent="Audio"]
+texture_filter = 1
+offset_left = 631.0
+offset_top = 22.0
+offset_right = 671.0
+offset_bottom = 62.0
+icon = ExtResource("6_h06r6")
+
+[node name="leftmusic" type="Button" parent="Audio"]
+texture_filter = 1
+offset_left = 528.0
+offset_top = 64.0
+offset_right = 568.0
+offset_bottom = 104.0
+rotation = 3.13232
+icon = ExtResource("6_h06r6")
+
+[node name="Votar" type="Button" parent="."]
+texture_filter = 1
+offset_left = 47.0
+offset_top = 29.0
+offset_right = 102.0
+offset_bottom = 60.0
+text = "Voltar"
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_j27cs")
+
+[node name="Fogo" type="Node" parent="."]
+
+[node name="fire1" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(3, 1, 1, 1)
+position = Vector2(477, 728)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_3ypwu")
+texture = ExtResource("4_6wmmf")
+
+[node name="fire2" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(3, 1, 1, 1)
+position = Vector2(394, 728)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_3ypwu")
+texture = ExtResource("4_6wmmf")
+
+[node name="fire3" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(3, 1, 1, 1)
+position = Vector2(246, 715)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_3ypwu")
+texture = ExtResource("4_6wmmf")
+
+[node name="fire4" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(3, 1, 1, 1)
+position = Vector2(141, 696)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_3ypwu")
+texture = ExtResource("4_6wmmf")
+
+[node name="fire5" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(3, 1, 1, 1)
+position = Vector2(35, 705)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_3ypwu")
+texture = ExtResource("4_6wmmf")
+
+[node name="fire6" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(3, 1, 1, 1)
+position = Vector2(571, 732)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_3ypwu")
+texture = ExtResource("4_6wmmf")
+
+[node name="fire7" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(3, 1, 1, 1)
+position = Vector2(671, 733)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_3ypwu")
+texture = ExtResource("4_6wmmf")
+
+[node name="fire8" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(3, 1, 1, 1)
+position = Vector2(761, 743)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_3ypwu")
+texture = ExtResource("4_6wmmf")
+
+[node name="fire9" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(3, 1, 1, 1)
+position = Vector2(838, 739)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_3ypwu")
+texture = ExtResource("4_6wmmf")
+
+[node name="fire10" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(3, 1, 1, 1)
+position = Vector2(950, 732)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_3ypwu")
+texture = ExtResource("4_6wmmf")
+
+[node name="fire11" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(3, 1, 1, 1)
+position = Vector2(1010, 739)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_3ypwu")
+texture = ExtResource("4_6wmmf")
+
+[node name="fire12" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(3, 1, 1, 1)
+position = Vector2(1108, 743)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_3ypwu")
+texture = ExtResource("4_6wmmf")
+
+[node name="fire13" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(3, 1, 1, 1)
+position = Vector2(1189, 734)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_3ypwu")
+texture = ExtResource("4_6wmmf")
+
+[node name="smoke" type="GPUParticles2D" parent="Fogo"]
+position = Vector2(468, 756)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_m3n0n")
+texture = ExtResource("5_ykjgn")
+lifetime = 1.5
+
+[node name="smoke2" type="GPUParticles2D" parent="Fogo"]
+position = Vector2(365, 765)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_m3n0n")
+texture = ExtResource("5_ykjgn")
+lifetime = 1.5
+
+[node name="smoke3" type="GPUParticles2D" parent="Fogo"]
+position = Vector2(244, 765)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_m3n0n")
+texture = ExtResource("5_ykjgn")
+lifetime = 1.5
+
+[node name="smoke4" type="GPUParticles2D" parent="Fogo"]
+position = Vector2(137, 745)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_m3n0n")
+texture = ExtResource("5_ykjgn")
+lifetime = 1.5
+
+[node name="smoke5" type="GPUParticles2D" parent="Fogo"]
+position = Vector2(26, 747)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_m3n0n")
+texture = ExtResource("5_ykjgn")
+lifetime = 1.5
+
+[node name="smoke6" type="GPUParticles2D" parent="Fogo"]
+position = Vector2(562, 754)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_m3n0n")
+texture = ExtResource("5_ykjgn")
+lifetime = 1.5
+
+[node name="smoke7" type="GPUParticles2D" parent="Fogo"]
+position = Vector2(647, 763)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_m3n0n")
+texture = ExtResource("5_ykjgn")
+lifetime = 1.5
+
+[node name="smoke8" type="GPUParticles2D" parent="Fogo"]
+position = Vector2(728, 768)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_m3n0n")
+texture = ExtResource("5_ykjgn")
+lifetime = 1.5
+
+[node name="smoke9" type="GPUParticles2D" parent="Fogo"]
+position = Vector2(813, 771)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_m3n0n")
+texture = ExtResource("5_ykjgn")
+lifetime = 1.5
+
+[node name="smoke10" type="GPUParticles2D" parent="Fogo"]
+position = Vector2(898, 777)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_m3n0n")
+texture = ExtResource("5_ykjgn")
+lifetime = 1.5
+
+[node name="smoke11" type="GPUParticles2D" parent="Fogo"]
+position = Vector2(980, 778)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_m3n0n")
+texture = ExtResource("5_ykjgn")
+lifetime = 1.5
+
+[node name="smoke12" type="GPUParticles2D" parent="Fogo"]
+position = Vector2(1064, 774)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_m3n0n")
+texture = ExtResource("5_ykjgn")
+lifetime = 1.5
+
+[node name="smoke13" type="GPUParticles2D" parent="Fogo"]
+position = Vector2(1169, 778)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_m3n0n")
+texture = ExtResource("5_ykjgn")
+lifetime = 1.5
+
+[node name="particula" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(8.5, 5, 1, 1)
+position = Vector2(469, 721)
+scale = Vector2(1e-05, 1e-05)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_eqbsq")
+texture = ExtResource("6_ay7jo")
+lifetime = 1.5
+
+[node name="particula2" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(8.5, 5, 1, 1)
+position = Vector2(378, 741)
+scale = Vector2(1e-05, 1e-05)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_eqbsq")
+texture = ExtResource("6_ay7jo")
+lifetime = 1.5
+
+[node name="particula3" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(8.5, 5, 1, 1)
+position = Vector2(273, 715)
+scale = Vector2(1e-05, 1e-05)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_eqbsq")
+texture = ExtResource("6_ay7jo")
+lifetime = 1.5
+
+[node name="particula4" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(8.5, 5, 1, 1)
+position = Vector2(137, 706)
+scale = Vector2(1e-05, 1e-05)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_eqbsq")
+texture = ExtResource("6_ay7jo")
+lifetime = 1.5
+
+[node name="particula5" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(8.5, 5, 1, 1)
+position = Vector2(41, 719)
+scale = Vector2(1e-05, 1e-05)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_eqbsq")
+texture = ExtResource("6_ay7jo")
+lifetime = 1.5
+
+[node name="particula6" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(8.5, 5, 1, 1)
+position = Vector2(585, 718)
+scale = Vector2(1e-05, 1e-05)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_eqbsq")
+texture = ExtResource("6_ay7jo")
+lifetime = 1.5
+
+[node name="particula7" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(8.5, 5, 1, 1)
+position = Vector2(657, 731)
+scale = Vector2(1e-05, 1e-05)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_eqbsq")
+texture = ExtResource("6_ay7jo")
+lifetime = 1.5
+
+[node name="particula8" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(8.5, 5, 1, 1)
+position = Vector2(750, 736)
+scale = Vector2(1e-05, 1e-05)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_eqbsq")
+texture = ExtResource("6_ay7jo")
+lifetime = 1.5
+
+[node name="particula9" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(8.5, 5, 1, 1)
+position = Vector2(837, 744)
+scale = Vector2(1e-05, 1e-05)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_eqbsq")
+texture = ExtResource("6_ay7jo")
+lifetime = 1.5
+
+[node name="particula10" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(8.5, 5, 1, 1)
+position = Vector2(921, 743)
+scale = Vector2(1e-05, 1e-05)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_eqbsq")
+texture = ExtResource("6_ay7jo")
+lifetime = 1.5
+
+[node name="particula11" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(8.5, 5, 1, 1)
+position = Vector2(991, 746)
+scale = Vector2(1e-05, 1e-05)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_eqbsq")
+texture = ExtResource("6_ay7jo")
+lifetime = 1.5
+
+[node name="particula12" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(8.5, 5, 1, 1)
+position = Vector2(1084, 738)
+scale = Vector2(1e-05, 1e-05)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_eqbsq")
+texture = ExtResource("6_ay7jo")
+lifetime = 1.5
+
+[node name="particula13" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(8.5, 5, 1, 1)
+position = Vector2(1162, 751)
+scale = Vector2(1e-05, 1e-05)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_eqbsq")
+texture = ExtResource("6_ay7jo")
+lifetime = 1.5
+
+[node name="fire01" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(2.5, 1.5, 1, 1)
+position = Vector2(475, 745)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_cgg8m")
+texture = ExtResource("7_xk3k8")
+
+[node name="fire02" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(2.5, 1.5, 1, 1)
+position = Vector2(384, 744)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_cgg8m")
+texture = ExtResource("7_xk3k8")
+
+[node name="fire03" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(2.5, 1.5, 1, 1)
+position = Vector2(266, 741)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_cgg8m")
+texture = ExtResource("7_xk3k8")
+
+[node name="fire04" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(2.5, 1.5, 1, 1)
+position = Vector2(149, 734)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_cgg8m")
+texture = ExtResource("7_xk3k8")
+
+[node name="fire05" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(2.5, 1.5, 1, 1)
+position = Vector2(35, 720)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_cgg8m")
+texture = ExtResource("7_xk3k8")
+
+[node name="fire06" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(2.5, 1.5, 1, 1)
+position = Vector2(574, 731)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_cgg8m")
+texture = ExtResource("7_xk3k8")
+
+[node name="fire07" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(2.5, 1.5, 1, 1)
+position = Vector2(657, 738)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_cgg8m")
+texture = ExtResource("7_xk3k8")
+
+[node name="fire08" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(2.5, 1.5, 1, 1)
+position = Vector2(748, 732)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_cgg8m")
+texture = ExtResource("7_xk3k8")
+
+[node name="fire09" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(2.5, 1.5, 1, 1)
+position = Vector2(824, 734)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_cgg8m")
+texture = ExtResource("7_xk3k8")
+
+[node name="fire010" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(2.5, 1.5, 1, 1)
+position = Vector2(912, 731)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_cgg8m")
+texture = ExtResource("7_xk3k8")
+
+[node name="fire011" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(2.5, 1.5, 1, 1)
+position = Vector2(1000, 735)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_cgg8m")
+texture = ExtResource("7_xk3k8")
+
+[node name="fire012" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(2.5, 1.5, 1, 1)
+position = Vector2(1083, 730)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_cgg8m")
+texture = ExtResource("7_xk3k8")
+
+[node name="fire013" type="GPUParticles2D" parent="Fogo"]
+modulate = Color(2.5, 1.5, 1, 1)
+position = Vector2(1179, 733)
+amount = 15
+process_material = SubResource("ParticleProcessMaterial_cgg8m")
+texture = ExtResource("7_xk3k8")
+
 [connection signal="pressed" from="level1" to="." method="_on_level_1_pressed"]
 [connection signal="pressed" from="level2" to="." method="_on_level_2_pressed"]
 [connection signal="pressed" from="level3" to="." method="_on_level_3_pressed"]
+[connection signal="pressed" from="level4" to="." method="_on_level_4_pressed"]
+[connection signal="pressed" from="Audio/playmusic" to="." method="_on_playmusic_pressed"]
+[connection signal="pressed" from="Audio/pausemusic" to="." method="_on_pausemusic_pressed"]
+[connection signal="pressed" from="Audio/rightmusic" to="." method="_on_rightmusic_pressed"]
+[connection signal="pressed" from="Audio/leftmusic" to="." method="_on_leftmusic_pressed"]
+[connection signal="pressed" from="Votar" to="." method="_on_votar_pressed"]

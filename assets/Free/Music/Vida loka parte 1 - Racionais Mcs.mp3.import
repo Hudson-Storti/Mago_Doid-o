@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bl1j8qb5bf76g"
+path="res://.godot/imported/Vida loka parte 1 - Racionais Mcs.mp3-b36277ccc00dd0c8ca3a59aaecdfeb94.mp3str"
+
+[deps]
+
+source_file="res://assets/Free/Music/Vida loka parte 1 - Racionais Mcs.mp3"
+dest_files=["res://.godot/imported/Vida loka parte 1 - Racionais Mcs.mp3-b36277ccc00dd0c8ca3a59aaecdfeb94.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

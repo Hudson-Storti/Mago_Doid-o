@@ -11,7 +11,7 @@ func _ready():
 func _process(delta):
 	var esc_pressed = Input.is_action_just_pressed("Pause")
 	if (esc_pressed == true):
-		get_tree().paused = true	
+		get_tree().paused = true
 		pause_panel.show()
 
 func _on_resume_pressed():
@@ -20,4 +20,4 @@ func _on_resume_pressed():
 
 func _on_menu_pressed():
 	get_tree().paused = false
-	get_tree().change_scene_to_file("res://scenes/menu/main_menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/menu/main_home.tscn")

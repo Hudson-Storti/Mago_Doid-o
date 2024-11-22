@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cnf262t5b1ifo"
+path="res://.godot/imported/Xuxa - Especial Estátua 20 anos.mp3-97a20e66a0a0ebf8bfbf3e0a407ee92c.mp3str"
+
+[deps]
+
+source_file="res://assets/Free/Music/Xuxa - Especial Estátua 20 anos.mp3"
+dest_files=["res://.godot/imported/Xuxa - Especial Estátua 20 anos.mp3-97a20e66a0a0ebf8bfbf3e0a407ee92c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,159 @@
+[gd_scene load_steps=18 format=3 uid="uid://b4vhj7hgkm6mr"]
+
+[ext_resource type="Script" path="res://scenes/menu/main_home.gd" id="1_qugx7"]
+[ext_resource type="Texture2D" uid="uid://cuyqua0ihrli7" path="res://assets/Free/CastleBackground.png" id="2_plp4m"]
+[ext_resource type="Shader" path="res://scenes/menu/scroll.gdshader" id="3_17sck"]
+[ext_resource type="Texture2D" uid="uid://b67k3yroaf0rv" path="res://assets/Free/logo4.0.png" id="3_56uoj"]
+[ext_resource type="Script" path="res://scenes/menu/audio.gd" id="4_btp7c"]
+[ext_resource type="Texture2D" uid="uid://dsyqpyriwgjpg" path="res://assets/Free/Music/botao-play.png" id="4_x7hjv"]
+[ext_resource type="Texture2D" uid="uid://dktt8h7pobn1m" path="res://assets/Free/TelaAnimada30%.png" id="4_yn4cv"]
+[ext_resource type="AudioStream" uid="uid://bcmv1moho4r30" path="res://assets/Free/Music/Maneol Gomes - Caneta Azul.mp3" id="5_n6mrb"]
+[ext_resource type="Texture2D" uid="uid://bxdoccd01ip54" path="res://assets/Free/Music/pausa.png" id="5_w1gf6"]
+[ext_resource type="Texture2D" uid="uid://b7dpdptyrwbr8" path="res://assets/Free/Music/seta-para-a-direita (1).png" id="6_hsyxf"]
+[ext_resource type="AudioStream" uid="uid://cwxcfnosjrj4y" path="res://assets/Free/Music/Crazy Frog - Axel F (Official Video).mp3" id="6_o1au0"]
+[ext_resource type="AudioStream" uid="uid://cnf262t5b1ifo" path="res://assets/Free/Music/Xuxa - Especial Estátua 20 anos.mp3" id="7_hrkbp"]
+[ext_resource type="AudioStream" uid="uid://bl1j8qb5bf76g" path="res://assets/Free/Music/Vida loka parte 1 - Racionais Mcs.mp3" id="8_uy01b"]
+[ext_resource type="AudioStream" uid="uid://c7y7bhsvqllgc" path="res://assets/Free/Music/Mc Sid , Nog - Sítio do Tio Harry (Animação Oficial) - Prod Nine e Chiocki.mp3" id="9_cvr5q"]
+[ext_resource type="AudioStream" uid="uid://uopvhub15m2b" path="res://assets/Free/Music/Mamonas Assassinas - Pelados em Santos (Videoclipe).mp3" id="10_bn2t8"]
+[ext_resource type="AudioStream" uid="uid://oi44yc6yo24t" path="res://assets/Free/Music/Eu Sou O Gummy Bear - Gummy Bear Song Brazilian Osito Gominola Brazil Som Livre Brasil.mp3" id="11_plb1v"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_66nc4"]
+shader = ExtResource("3_17sck")
+shader_parameter/speed = 0.03
+
+[node name="MainHome" type="Node"]
+script = ExtResource("1_qugx7")
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -598.0
+offset_top = -338.0
+offset_right = 601.0
+offset_bottom = 336.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_plp4m")
+
+[node name="TelaAnimada" type="TextureRect" parent="TextureRect2"]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_66nc4")
+layout_mode = 0
+offset_top = -1.0
+offset_right = 1201.0
+offset_bottom = 673.0
+texture = ExtResource("4_yn4cv")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -448.0
+offset_top = -233.0
+offset_right = 453.0
+offset_bottom = -32.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_56uoj")
+
+[node name="PLAY" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -263.0
+offset_top = -4.0
+offset_right = -71.0
+offset_bottom = 87.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "PLAY"
+
+[node name="LEVEL" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 65.0
+offset_top = -3.0
+offset_right = 257.0
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "LEVEL"
+
+[node name="Audio" type="Node" parent="."]
+script = ExtResource("4_btp7c")
+
+[node name="playmusic" type="Button" parent="Audio"]
+texture_filter = 1
+offset_left = 586.0
+offset_top = 24.0
+offset_right = 626.0
+offset_bottom = 64.0
+icon = ExtResource("4_x7hjv")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("5_n6mrb")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("6_o1au0")
+
+[node name="AudioStreamPlayer3" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("7_hrkbp")
+
+[node name="AudioStreamPlayer4" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("8_uy01b")
+
+[node name="AudioStreamPlayer5" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("9_cvr5q")
+
+[node name="AudioStreamPlayer6" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("10_bn2t8")
+
+[node name="AudioStreamPlayer7" type="AudioStreamPlayer" parent="Audio/playmusic"]
+stream = ExtResource("11_plb1v")
+
+[node name="pausemusic" type="Button" parent="Audio"]
+texture_filter = 1
+offset_left = 538.0
+offset_top = 24.0
+offset_right = 578.0
+offset_bottom = 64.0
+icon = ExtResource("5_w1gf6")
+
+[node name="rightmusic" type="Button" parent="Audio"]
+texture_filter = 1
+offset_left = 631.0
+offset_top = 22.0
+offset_right = 671.0
+offset_bottom = 62.0
+icon = ExtResource("6_hsyxf")
+
+[node name="leftmusic" type="Button" parent="Audio"]
+texture_filter = 1
+offset_left = 528.0
+offset_top = 64.0
+offset_right = 568.0
+offset_bottom = 104.0
+rotation = 3.13232
+icon = ExtResource("6_hsyxf")
+
+[connection signal="pressed" from="PLAY" to="." method="_on_level_1_pressed"]
+[connection signal="pressed" from="LEVEL" to="." method="_on_level_pressed"]
+[connection signal="pressed" from="Audio/playmusic" to="." method="_on_playmusic_pressed"]
+[connection signal="pressed" from="Audio/pausemusic" to="." method="_on_pausemusic_pressed"]
+[connection signal="pressed" from="Audio/rightmusic" to="." method="_on_rightmusic_pressed"]
+[connection signal="pressed" from="Audio/leftmusic" to="." method="_on_leftmusic_pressed"]
